@@ -2,7 +2,7 @@
 alert('Welcome to my Website!')
 
 let favoriteColor = prompt('What is your favorite color?')
-alert('Great, ' + favoriteColor +'is my favorite color too!')
+alert('Great, ' + favoriteColor +' is my favorite color too!')
 
 let userInputMovieLM = prompt('How many days would you like to rent little mermaid?')
 alert(userInputMovieLM + ' days. Your total is $' + userInputMovieLM * 3 +'.')
@@ -15,7 +15,7 @@ alert(userInputMovieHS + ' days. Your total is $' + userInputMovieBB * 3 + '.')
 
 function googlePay() {
     let promptHours = prompt('How many hours did you work at Google?')
-    alert('Your pay is $ ' + promptHours * 400)
+    alert('Your pay is $ ' + promptHours * 400 + '.')
 }
 
 googlePay()
@@ -36,9 +36,9 @@ facebookPay()
 
 function studentEnrolled() {
     if (confirm("Is your class full?") == true) {
-        alert("Sorry you aren't eligible to enroll.")
+        alert("Sorry, you aren't eligible to enroll.")
     } else if (confirm('Is there a conflict with your schedule?') == true) {
-        alert("Sorry you aren't eligible to enroll.")
+        alert("Sorry, you aren't eligible to enroll.")
     } else (alert('Congratulations, you are enrolled.'))
 }
 
