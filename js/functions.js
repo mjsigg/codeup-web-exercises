@@ -109,6 +109,8 @@
 
     function applyDiscount(originalPrice, discountP) {
         return originalPrice * discountP
+
+        let discountP = Math.random()
     }
 
     console.log(applyDiscount(100, .20))
