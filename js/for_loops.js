@@ -48,12 +48,12 @@ showMultiplicationTable()
 //     count +=1;
 // }
 
-function question5() {
-    for (let x = 100; x > 4;) {
-        console.log(x);
-        x-=5
-    }
-}
-question5()
+// function question5() {
+//     for (let x = 100; x > 4;) {
+//         console.log(x);
+//         x-=5
+//     }
+// }
+// question5()
 
 
