@@ -7,7 +7,11 @@
      * 'names'.
      */
 
-    let names = ['Will','Smith', 'Chris', 'Rock']
+    let names = ['Will','Smith', 'Chris', 'Rock', 'Jada']
+    console.log(names[0])
+    console.log(names[1])
+    console.log(names[2])
+    console.log(names[3])
 
     /**
      * TODO:
@@ -15,7 +19,7 @@
      * array.
      */
 
-    console.log(names)
+    console.log(names.length)
     /**
      * TODO:
      * Create log statements that will print each of the names individually by
@@ -39,7 +43,7 @@
      * Refactor your above code to use a `forEach` loop
      */
 names.forEach(function (output) {
-    console.log(output)
+    console.log('Answer to forEach ' + output)
 })
     /**
      * TODO:
@@ -55,20 +59,22 @@ names.forEach(function (output) {
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
 
-    function returnFirst() {
-        return names[0]
+    function returnFirst(arr) {
+        return arr[0]
     }
 
-    function returnSecond() {
-        return names[1]
+    function returnSecond(arr) {
+        return arr[1]
     }
 
-    function returnLast() {
-        return names[3]
+    function returnLast(arr) {
+        if (arr === [])
+            return arr[arr.length-1]
     }
 
     returnFirst()
     returnSecond()
     returnLast()
     console.log(returnFirst(),returnSecond(),returnLast())
+
 })();
