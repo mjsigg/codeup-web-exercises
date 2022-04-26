@@ -112,7 +112,17 @@ shoppers.forEach(function(shoppers) {
             {title: 'Outliers', author: {firstName:'Malcom', lastName:'Gladwell'}},
     ]
 
-    console.log(books)
+
+    let testBooks = [
+        {title:{}, author:{}}
+    ]
+    testBooks.title = 'book1', 'book2'
+    console.log(testBooks)
+
+
+
+
+
     books.forEach(function (books) {
         console.log(books)
     })
@@ -157,6 +167,9 @@ books.forEach(function (books,index) {
      *   `showBookInfo` function.
      */
 
+
+
+console.log('Answer to createBook:' + books)
 
 
 })();
