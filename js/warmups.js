@@ -17,3 +17,24 @@ function fizzBuzz () {
 }
 
 fizzBuzz()
+
+
+// let arrOfStrings = ['dog','cat','frog','bat']
+//
+// function arrOfStrings(letter) {
+// arrOfStrings.forEach(arrOfStrings,) {
+//     letter.
+//     }
+// }
+
+
+function allFirstLetters(arr) {
+    let bucket = '';
+    for (let el of arr) {
+        bucket +=el[0]
+    }
+    return bucket
+}
+
+const testArrStrings = ['dog','cat','frog','bat']
+console.log(allFirstLetters(testArrStrings))
