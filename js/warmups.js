@@ -38,3 +38,16 @@ function allFirstLetters(arr) {
 
 const testArrStrings = ['dog','cat','frog','bat']
 console.log(allFirstLetters(testArrStrings))
+
+
+function alphabetize() {
+    let arr = ['c,d,e,o,p,u']
+    let index = (0,3,1,2,5,4)
+
+    return index
+}
+
+console.log(alphabetize());
+
+
+
