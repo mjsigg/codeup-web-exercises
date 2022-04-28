@@ -1,9 +1,59 @@
-/*h1 {*/
-/*    */
-/*}*/
 
 
-/*.fancy-header{*/
-/*    color:blue;*/
-/*    text-decoration: underline;*/
-/*}*/
+/*Add a style to change the background color of the page.*/
+/*Add a style to add a background image to your background. Search how to manipulate the position, sizing of this background image.*/
+/*Add a style to change the list-style to something other than the default bullet.*/
+/*Add a style to change the font for the entire page. Use google fonts if you would like.*/
+/*Add a style to change the table, table cells td and rows tr padding and font sizes.*/
+/*Add a style to alter the anchor tags and its different states. (e.g. link, visited, hover and active).*/
+/*                                                                                                     Continue experimenting with styles to increase the visual appeal of the page.*/
+/*                                                                                                     Finally, commit the changes to your git repository, and push to GitHub.*/
+
+/*elements*/
+
+
+
+head {
+
+}
+body{
+    background-color: ghostwhite;
+    /*background-image: url("../images/f60a1353a27cad73af9fdb3d9bf16448.webp");*/
+    background-size: ;
+    background-position-x: center;
+    background-position-y: center;
+    height: 50vh;
+    background-repeat: no-repeat;
+    font-family: 'Bangers',cursive ;
+    background-attachment: scroll;
+    opacity: inherit;
+}
+
+h1 {
+    color: cyan;
+    text-align: center;
+
+}
+
+h2 {
+    color: mediumaquamarine;
+}
+
+ul{
+    list-style-image: url("../images/to-do.png");
+    list-style-position: inside;
+    background-repeat: no-repeat;
+}
+
+ol{
+    list-style-image: url("../images/numbered-list.png");
+    list-style-position: inside;
+    background-repeat: no-repeat;
+
+}
+
+.fancy-header{
+    color:blue;
+    text-decoration: underline;
+}
+
