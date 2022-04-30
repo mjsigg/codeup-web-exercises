@@ -1,8 +1,10 @@
 // Apr 26th 2022 Notes for Assessment
+//
+// function isANumber(num) {
+//     return typeof num === 'number'
+// }
 
-function isANumber(num) {
-    return typeof num === 'number'
-}
+
 
 // !isNaN(parseFloat(num))
 
@@ -61,7 +63,8 @@ function sumOfSquares() {
 }
 
 function isPalindrome (str) {
-    if (typeof str !== 'string' || !isNaN(parseNumber(str))) {
+    if (typeof str !== 'string' ||
+        !isNaN(parseNumber(str))) {
         return false;
     } else {
         str = str.toLowerCase();

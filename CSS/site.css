@@ -19,7 +19,6 @@ head {
 body{
     background-color: ghostwhite;
     /*background-image: url("../images/f60a1353a27cad73af9fdb3d9bf16448.webp");*/
-    background-size: ;
     background-position-x: center;
     background-position-y: center;
     height: 50vh;
@@ -51,6 +50,8 @@ ol{
     background-repeat: no-repeat;
 
 }
+
+
 
 .fancy-header{
     color:blue;
