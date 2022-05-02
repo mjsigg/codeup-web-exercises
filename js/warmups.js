@@ -42,6 +42,14 @@ console.log(allFirstLetters(testArrStrings))
 let arr1 = ['c','d','e','o','p','u']
 console.log(arr1.index(1, 4));
 
+function sumOfElements()  {
+    let arraySum = ([1,2,3,4,5])
+    return arraySum
+
+
+
+    console.log(arraySum.substring)
+}
 
 
 

@@ -3,12 +3,13 @@
 // 2 & 3
 function showMultiplicationTable (input) {
     let z = Math.floor(Math.random() * 200 )+ 20
+
     for (let incr = 1; incr < 10; incr++){
-        // console.log(input + ' * ' + incr + ' = ' + input * incr)
-        // if (incr % 2 === 0) {
-        //     console.log(incr * z + ' is even.')
-        // }
-        // console.log(incr * z + ' is odd.')
+        console.log(input + ' * ' + incr + ' = ' + input * incr)
+        if (incr % 2 === 0) {
+            console.log(incr * z + ' is even.')
+        }
+        console.log(incr * z + ' is odd.')
 
     }
 }
