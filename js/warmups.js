@@ -28,30 +28,63 @@ fizzBuzz()
 // }
 
 
-function allFirstLetters(arr) {
-    let bucket = '';
-    for (let el of arr) {
-        bucket +=el[0]
-    }
-    return bucket
+// function allFirstLetters(arr) {
+//     let bucket = '';
+//     for (let el of arr) {
+//         bucket +=el[0]
+//     }
+//     return bucket
+// }
+//
+// const testArrStrings = ['dog','cat','frog','bat']
+// console.log(allFirstLetters(testArrStrings))
+//
+// let arr1 = ['c','d','e','o','p','u']
+// console.log(arr1.index(1, 4));
+//
+// function sumOfElements()  {
+//     let arraySum = ([1,2,3,4,5])
+//     return arraySum
+
+
+
+//     console.log(arraySum.substring)
+// }
+
+// 03May2022
+
+let product1 = {
+    name: 'Hammar',
+    priceInCents: 400,
+    description: 'It is a a hammar.',
+    inventory: 25034
 }
 
-const testArrStrings = ['dog','cat','frog','bat']
-console.log(allFirstLetters(testArrStrings))
+let product2 = {
+    name: 'Computer',
+    priceInCents: 40000,
+    description: 'It is a computer.',
+    inventory: 33000
+}
 
-let arr1 = ['c','d','e','o','p','u']
-console.log(arr1.index(1, 4));
-
-function sumOfElements()  {
-    let arraySum = ([1,2,3,4,5])
-    return arraySum
-
-
-
-    console.log(arraySum.substring)
+let product3 = {
+    name: 'Ruler',
+    priceInCents: 1000,
+    description: 'It is a ruler.',
+    inventory: 2200
 }
 
 
+function returnProductEssentialDetails(product) {
+    console.log(product1.name,product1.priceInCents)
+}
 
+console.log(returnProductEssentialDetails());
+
+function returnProductAllEssentialDetails() {
+
+    let product1Array = [returnProductEssentialDetails(product1)]
+
+}
 
 
