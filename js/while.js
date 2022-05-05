@@ -16,9 +16,9 @@ while (counter <= total) {
 //
 //
 // // This is how you get a random number between 50 and 100
-var allCones = Math.floor(Math.random() * 50) + 50;
+
 // // This expression will generate a random number between 1 and 5
-let customerOrder = Math.floor(Math.random() * 5) + 1;
+
 // The output should be similar to the following:
 //
 //     5 cones sold...  // if there are enough cones
@@ -26,16 +26,25 @@ let customerOrder = Math.floor(Math.random() * 5) + 1;
 // Yay! I sold them all! // If there are no more cones
 //     1. Finally, commit the changes to your git repository, and push to GitHub.
 
+var allCones = Math.floor(Math.random() * 50) + 50;
+let customerOrder = Math.floor(Math.random() * 5) + 1;
+let customerTransaction = allCones - customerOrder
+
 console.log('Total cone count is:' + allCones)
 
-let customerPurchase = allCones - customerOrder
-let coneInventory = function coneInventory() {
-    return customerPurchase
-}
+
 
 do{
-    if(coneInventory >= 0) {
-        console.log('Thank you for your purchase of ' + customerOrder + ' cones.')
-    }
-}while (coneInventory())
+  for(customerTransaction; allCones != 0 ;customerTransaction++){
+      console.log('Thank you for your purchase of ' + customerOrder + 'cones!'+ allCones+ 'remaining.')
+      customerTransaction++
+  }
+
+  if (customerOrder > allCones) {
+      console.log('Sorry, only'+ allCones+ 'left.')
+      continue;
+  }
+
+
+}while (allCones != 0)
 
