@@ -1,0 +1,10 @@
+.jumbotron{
+    background-image: url("../images/pizza.png");
+    background-size: cover;
+    height: 346px;
+
+}
+
+#card-container{
+    background-color: #3B94D9;
+}
