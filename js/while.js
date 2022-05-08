@@ -27,24 +27,18 @@ while (counter <= total) {
 //     1. Finally, commit the changes to your git repository, and push to GitHub.
 
 var allCones = Math.floor(Math.random() * 50) + 50;
-let customerOrder = Math.floor(Math.random() * 5) + 1;
-let customerTransaction = allCones - customerOrder
-
-console.log('Total cone count is:' + allCones)
 
 
 
-do{
-  for(customerTransaction; allCones != 0 ;customerTransaction++){
-      console.log('Thank you for your purchase of ' + customerOrder + 'cones!'+ allCones+ 'remaining.')
-      customerTransaction++
-  }
+do {
+    let customerOrder = Math.floor(Math.random() * 5) + 1;
+    let customerNumber = 0;
 
-  if (customerOrder > allCones) {
-      console.log('Sorry, only'+ allCones+ 'left.')
-      continue;
-  }
-
-
-}while (allCones != 0)
+    customerNumber++;
+    if (customerOrder > allCones) {
+        console.log('Sorry, only ' + allCones+ 'left.')
+    }else
+        allCones -= customerOrder;
+        console.log('Thank you for your purchase of '+ customerOrder+ '! '+ allCones + 'left.')
+}while(allCones>0)
 
