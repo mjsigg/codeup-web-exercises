@@ -39,13 +39,13 @@ h2 {
 }
 
 ul{
-    list-style-image: url("../images/to-do.png");
+    list-style-image: url("../to-do.png");
     list-style-position: inside;
     background-repeat: no-repeat;
 }
 
 ol{
-    list-style-image: url("../images/numbered-list.png");
+    list-style-image: url("../numbered-list.png");
     list-style-position: inside;
     background-repeat: no-repeat;
 
