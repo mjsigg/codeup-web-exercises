@@ -88,7 +88,7 @@ let product3 = {
 // }
 
 
-const hamsters = [
+var hamsters = [
     {
         name: "Hamtaro",
         heightInMM: 86,
@@ -122,12 +122,39 @@ const hamsters = [
     }
 ];
 
-let hamstersString = [hamsters].toString()
-console.log(hamstersString);
+// let hamstersString = [hamsters].toString()
+// console.log(hamstersString);
+//
+//
+// let colorful = hamsters[hamsters.length].fur
+//
+// console.log(colorful)
+//
+// function returnObject(){
+//
+//
+// }
+//
+// returnObject()
 
-function returnObject(){
+let things = {
+    string: 'tacocat',
+    size:7,
+    containsLetterFromRSTLNE: true,
+    isOneWord: true
+};
 
+let thingy = {
+    string: 'billybob',
+    size:10,
+    containsLetterFromRSTLNE: false,
+    isOneWord: false
+};
 
+function acceptString(things,thingy) {
+    return things || thingy
 }
 
-returnObject()
+acceptString()
+
+console.log(things,thingy)
