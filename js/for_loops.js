@@ -40,21 +40,21 @@ showMultiplicationTable()
 // }
 //
 //
-// question4(9)
+question4(9)
 
-// let count = 1;
-// let x = 9;
-// for (a = 0; a<=5; a +=1){
-//     console.log(x.repeat(count));
-//     count +=1;
-// }
+let count = 1;
+let x = 9;
+for (a = 0; a<=5; a +=1){
+    console.log(x.repeat(count));
+    count +=1;
+}
 
-// function question5() {
-//     for (let x = 100; x > 4;) {
-//         console.log(x);
-//         x-=5
-//     }
-// }
-// question5()
+function question5() {
+    for (let x = 100; x > 4;) {
+        console.log(x);
+        x-=5
+    }
+}
+question5()
 
 

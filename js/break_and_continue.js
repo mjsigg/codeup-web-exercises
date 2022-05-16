@@ -19,6 +19,7 @@ function question6() {
     } else if (askNumber === false || undefined || isNaN(parseFloat(askNumber))) {
         question6()
     }
+
     console.log('The number to skip is ' + askNumber + '.')
 
     for (let count = 1; count <= 50;count++) {

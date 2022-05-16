@@ -2,16 +2,16 @@
 
 console.log('Yay! I completed the warm-up!')
 
-function fizzBuzz () {
+function fizzBuzz() {
     for (let count = 1; count < 101; count++) {
-        if(count % 3 === 0 && count % 5 === 0) {
+        if (count % 3 === 0 && count % 5 === 0) {
             console.log('FizzBuzz')
-        }else if (count % 3 === 0) {
-            console.log ('Fizz')
-        }else if (count % 5 === 0) {
-            console.log ('Buzz')
+        } else if (count % 3 === 0) {
+            console.log('Fizz')
+        } else if (count % 5 === 0) {
+            console.log('Buzz')
         } else {
-            console.log ('Number is:' + count)
+            console.log('Number is:' + count)
         }
     }
 }
@@ -45,7 +45,6 @@ fizzBuzz()
 // function sumOfElements()  {
 //     let arraySum = ([1,2,3,4,5])
 //     return arraySum
-
 
 
 //     console.log(arraySum.substring)
@@ -95,25 +94,25 @@ var hamsters = [
         fur: ['orange', 'white'],
         gender: "male",
         dateOfBirth: "August 6"
-    } , {
+    }, {
         name: "Bijou",
         heightInMM: 75,
         fur: ['white'],
         gender: "female",
         dateOfBirth: "July 10"
-    } , {
+    }, {
         name: "Oxnard",
         heightInMM: 100,
         fur: ['grey', 'white'],
         gender: "male",
         dateOfBirth: "May 3"
-    } , {
+    }, {
         name: "Boss",
         heightInMM: 120,
         fur: ['brown', 'white'],
         gender: "male",
         dateOfBirth: "Spetember 21"
-    } , {
+    }, {
         name: "Snoozer",
         heightInMM: 85,
         fur: ['brown', 'white', "pink"],
@@ -139,22 +138,43 @@ var hamsters = [
 
 let things = {
     string: 'tacocat',
-    size:7,
+    size: 7,
     containsLetterFromRSTLNE: true,
     isOneWord: true
 };
 
 let thingy = {
     string: 'billybob',
-    size:10,
+    size: 10,
     containsLetterFromRSTLNE: false,
     isOneWord: false
 };
 
-function acceptString(things,thingy) {
+function acceptString(things, thingy) {
     return things || thingy
 }
 
 acceptString()
 
-console.log(things,thingy)
+console.log(things, thingy)
+
+/// return back only numbers sorted
+
+
+let mixedData = ['fred', true, 5, 3]
+
+function filterNumbers(param) {
+    if(typeof param !== 'object') return;
+    let bucket = [];
+    for (const el of param) {
+        if (typeof el === 'number') bucket.push(el);
+    }
+    return bucket;
+
+}
+
+console.log(filterNumbers(mixedData));
+
+
+
+x if( x == 'number')
