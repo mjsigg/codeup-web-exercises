@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/jquery_exercises.css">
+</head>
+<body>
+
+
+<section class="animated-grid">
+    <div class="card">q</div>
+    <div class="card">w</div>
+    <div class="card">e</div>
+    <div class="card">r</div>
+    <div class="card">t</div>
+    <div class="card">y</div>
+    <div class="card">u</div>
+    <div class="card">i</div>
+    <div class="card">o</div>
+    <div class="card">p</div>
+</section>
+
+
+</body>
+
+
+<!--///jquery                                       -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!--jquery end
+                                                    -->
+<script>
+    $(function() {
+
+        // $('*').css('border', '1px solid #F00');
+
+
+        let img = $( "img" )
+
+        img.on({
+            'click': function() {
+                let i = 0
+                i++
+                console.log(i)
+                if(i === 3 ) {
+                    img = img.attr('src','https://c.tenor.com/clPXsR7DFm8AAAAC/chris-rock-slap-will-smith-slap.gif')
+                }
+                if(i === 2) {
+                    img = img.attr('src', 'https://c.tenor.com/WtcK0rA8hkcAAAAC/uh-oh-oh-no.gif')
+                }
+                if(i === 1) {
+                    img = img.attr('src', 'https://c.tenor.com/gaEpIfzxzPEAAAAC/pedro-monkey-puppet.gif')
+                }
+
+            }
+        });
+
+    });
+</script>
+
+</body>
+</html>

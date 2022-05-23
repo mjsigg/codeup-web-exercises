@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+    <link rel="stylesheet" href="css/konami.css">
+
+</head>
+<body>
+
+<section class="animated-grid">
+    <div class="card" id="konami-code"></div>
+    <div class="card" id="ehonda"></div>
+    <div class="card">c</div>
+    <div class="card">d</div>
+    <div class="card">e</div>
+    <div class="card">f</div>
+    <div class="card">g</div>
+    <div class="card">h</div>
+    <div class="card">i</div>
+    <div class="card">j</div>
+    <div class="card">k</div>
+    <div class="card">l</div>
+    <div class="card"  id="main">main</div>
+</section>
+
+
+<script>
+
+
+
+
+
+</script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous"></script>
+<script>
+    "use strict";
+
+    // let str = ''
+    // let matchCodes = [38,38,40,40,37,39,37,39,66,65]
+    // let strMatchCodes = str += matchCodes
+    //
+    // function inputCode() {
+    //     let bucket = []
+    //
+    //     $(document).keydown(function (event) {
+    //     bucket.push(event.which)
+    //
+    // })
+    // }
+    //
+    // inputCode()
+
+    // a key map of allowed keys
+    var allowedKeys = {
+        37: 'left',
+        38: 'up',
+        39: 'right',
+        40: 'down',
+        65: 'a',
+        66: 'b'
+    };
+
+
+    // the 'official' Konami Code sequence
+    var konamiCode = ['up', 'up', 'down', 'down', 'left', 'right', 'left', 'right', 'b', 'a'];
+    let konamiCodeSame = ['up', 'up', 'down', 'down', 'left', 'right', 'left', 'right', 'b', 'a'];
+
+    const konamiCodeCheck = konamiCodeSame.every(function(element) {return element})
+
+    let konamiCode2 = konamiCode.map(function (x) {
+        return x
+    })
+
+    console.log(konamiCodeCheck)
+
+    // a variable to remember the 'position' the user has reached so far.
+    var codePosition = 0;
+
+    // add keydown event listener
+    document.addEventListener('keydown', function(e) {
+
+        var key = allowedKeys[e.keyCode];
+        var konamiKey = konamiCode[codePosition];
+
+
+        if (key == konamiKey) {
+            document.querySelector('#konami-code').style.backgroundImage = "url('https://i.gifer.com/embedded/download/77d5.gif')";
+            codePosition++;
+
+            if (codePosition[1]) {
+                // activateCheatsKonami();
+                codePosition = 0;
+            }
+
+        } else {
+            codePosition = 0;
+        }
+    });
+
+    // function activateCheatsKonami() {
+    //
+    //         document.querySelector('#konami-code').style.backgroundImage = "url('https://i.gifer.com/embedded/download/77d5.gif')";
+    //
+    //         var audio = new Audio('audio/pling.mp3');
+    //         audio.play();
+    //         alert("cheats activated");
+    //
+    //
+    // }
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

@@ -177,4 +177,3 @@ console.log(filterNumbers(mixedData));
 
 
 
-x if( x == 'number')

@@ -7,6 +7,8 @@
 <body>
 
 <h1 id="main-header">Hello World!</h1>
+
+<h2 id="ul-items">Change Color</h2>
 <ul>
     <li data-dbid="1">Item 1</li>
     <li data-dbid="2">Item 2</li>
@@ -25,31 +27,50 @@
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
 
+<button id="first-button">Change to Javascript is cool. </button>
+<button id="second-button">Change to subHeader to blue. </button>
+<button id="third-button">Change colors based ßon click. </button>
+<button id="fourth-button">Change them colors. </button>
+<button id="fifth-button">Mission accomplished. </button>
+
+
 <script>
     (function() {
         "use strict";
+
+
         // // TODO: Uncomment next line and get the main header element by id
         var mainHeader = document.getElementById('main-header');
+
+
         //
         // // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-        mainHeader.innerHTML = "JavaScript is  Cool"
+        document.getElementById('first-button').addEventListener('click', function () {
+            mainHeader.innerHTML = "JavaScript is  Cool"
+        })
+
 
         // TODO: Uncomment the next line and get the sub header element by id
-        var subHeader = document.getElementById('sub-header');
+        let subHeader = document.getElementById('sub-header');
 
         // TODO: Set the text color of subHeader to blue
-        subHeader.style.color = 'blue'
+
+        document.getElementById('second-button').addEventListener('click',function (){
+             subHeader.style.color = 'blue'
+        })
 
         // TODO: Uncomment the next line and get all list items
 
         let listItems = document.getElementsByTagName('li');
 
-        for (var i = 0; i < listItems.length; i++) {
-            listItems[i].style.color = 'red'
-            if(i % 2 === 1) {
-                listItems[i].style.color = 'grey'
+        document.getElementById('third-button').addEventListener('click',function () {
+
+            for (let i = 0; i < listItems.length;) {
+                if(i % 2 === 0) {
+                    listItems[i % 2 === 0].style.color = 'red'
+                }
             }
-        }
+        })
 
 
         // TODO: Set text color on every other list item to grey
@@ -57,14 +78,22 @@
 
 
         // TODO: Set text color of li with dbid = 1 to blue
-        let dBid = listItems[0].style.color = 'blue'
+        let dBid = listItems[0]
+
+        document.getElementById('fourth-button').addEventListener('click', function () {
+            dBid = listItems[0].style.color = 'blue'
+        })
 
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
         let subParagraph = document.getElementsByClassName("sub-paragraph")[0];
+
+        document.getElementById('fifth-button').addEventListener('click', function () {
+            subParagraph.innerHTML = "Mission Accomplished!"
+        })
     //
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        subParagraph.innerHTML = "Mission Accomplished!"
+
     })();
 </script>
 </body>
