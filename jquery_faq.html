@@ -14,7 +14,34 @@
     <dd><strong>General Info:</strong> Denali National Park is located in southcentral Alaska. Denali Park’s headquarters is located along Alaska Route 3, the George Parks Highway, approximately 240 miles north of Anchorage, Alaska and 125 miles south of
         <a href="">Fairbanks, Alaska</a> and 12 miles south of <a href="">Healy, Alaska.</a></dd>
 </dl>
-<span className="a b">classList is 'a b'</span>
+
+<h3>National Park Name</h3>
+<ul>
+    <li>Interesting facts</li>
+    <li>Interesting facts</li>
+    <li>Interesting facts</li>
+    <li class="blue-target">Interesting facts</li>
+</ul>
+
+<h3>National Park Name</h3>
+<ul>
+    <li>Interesting facts</li>
+    <li>Interesting facts</li>
+    <li>Interesting facts</li>
+    <li class="blue-target">Interesting facts</li>
+</ul>
+
+<h3>National Park Name</h3>
+<ul>
+    <li>Interesting facts</li>
+    <li>Interesting facts</li>
+    <li>Interesting facts</li>
+    <li class="blue-target">Interesting facts</li>
+</ul>
+
+<button id="target">
+Turn Yellow
+</button>
 
 <dl></dl>
 <dl></dl>
@@ -25,36 +52,27 @@
 <dl></dl>
 <dl></dl>
 <dl></dl>
-<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
 
-    // $(function() {
-    //
-    //     $('.dl').click(function () {
-    //         event.preventDefault();
-    //         $('.dl')addClass('hidden')
-    //     })
-    //
-    //
-    // });
+    $(function() {
+        console.log( "ready!" );
+
+        $('#target').click(function() {
+            $('ul').each().css('background-color', 'yellow')
+        })
+
+        $('h3').click(function() {
+            $(this).next().children().css('font-weight', 'bold')
+        })
+
+        $('li').click(function() {
+            $(this).parent().children('li').first().css('background-color', 'blue')
+        })
+
+    });
 
 
-    const span = document.querySelector("span");
-    const classes = span.classList;
-
-    span.addEventListener('click', function() {
-        const result = classes.toggle("c");
-
-        if (result) {
-            span.textContent = `'c' added; classList is now "${classes}".`;
-        } else {
-            span.textContent = `'c' removed; classList is now "${classes}".`;
-        }
-    })
-
-    dl.addEventListener('click', function () {
-        cons
-    })
 
 
 
@@ -64,6 +82,7 @@
     //     getDl.style.backgroundColor = 'blue';
     //
     // })
+
 
 
 
