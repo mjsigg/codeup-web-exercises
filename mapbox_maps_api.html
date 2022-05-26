@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet' />
+</head>
+
+<body>
+
+<div id='map' style='width: 95vw; height: 75vh; margin: auto'></div>
+
+<h1 id="place"></h1>
+<script src="js/keys.js"></script>
+<script src="js/geocode-utils.js"></script>
+
+<script>
+    mapboxgl.accessToken = MAPBOX_API_KEY;
+    const map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/streets-v11', // style URL
+        center: [-98.4946, 29.425], // starting position [lng, lat]
+        zoom: 5 // starting zoom
+    });
+
+    let marker = new mapboxgl.Marker()
+        .setLngLat([-98.4946, 29.425])
+        .addTo(map)
+        .setPopup(new mapboxgl.Popup()
+            .setHTML("<h1>Hello World!</h1>"))
+
+    let anotherMarker = new mapboxgl.Marker()
+        .setLngLat([-118.681, 34.095669])
+        .addTo(map)
+
+    // let someOtherMarker = new mapboxgl.Marker()
+    //     .setLngLat([34.095, -118.681])
+    //     .addTo(map)
+
+
+
+
+
+    // const popup = new mapboxgl.Popup()
+    //     .setLngLat([-98.489615, 29.426827])
+    //     .setHTML("<p>Codeup Rocks!</p>")
+    //     .addTo(map)
+
+    // geocode('23119 Colonial Pkwy Suite B-2, Katy, TX 77449', MAPBOX_API_KEY).then(function (data) {
+    //     console.log(data)
+    //     const popupPhat = new mapboxgl.Popup()
+    //     .setLngLat(data)
+    //         .setHTML('<p>This is where the Rockets play.</p>')
+    //     .addTo(map)
+    // })
+
+    // let LONG_LAT = [];
+
+    // marker.on('dragend', function () {
+    //     LONG_LAT = marker.getLngLat();
+    //     document.getElementById('#place').innerHTML = LONG_LAT.lng + ', ' + LONG_LAT.lat
+    //     map.flyTo({center: [LONG_LAT.lng, LONG_LAT.lat]})
+    //     reverseGeocode(LONG_LAT, MAPBOX_API_KEY).then(function (data) {
+    //         document.getElementById('place').innerHTML = data
+    //     })
+    // });
+    //
+    // reverseGeocode({lat: 62.3353, lng: 40.8659}, MAPBOX_API_KEY).then(function(location){
+    //     console.log(location)
+    // })
+
+</script>
+
+</body>
+</html>
+
