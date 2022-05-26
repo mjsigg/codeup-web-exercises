@@ -11,7 +11,10 @@
 
 <div id='map' style='width: 95vw; height: 75vh; margin: auto'></div>
 
+<img src="" alt="" sizes="" srcset="">
+
 <h1 id="place"></h1>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="js/keys.js"></script>
 <script src="js/geocode-utils.js"></script>
 
@@ -21,7 +24,7 @@
         container: 'map', // container ID
         style: 'mapbox://styles/mapbox/streets-v11', // style URL
         center: [-98.4946, 29.425], // starting position [lng, lat]
-        zoom: 5 // starting zoom
+        zoom: 4 // starting zoom
     });
 
     let marker = new mapboxgl.Marker()
@@ -30,13 +33,35 @@
         .setPopup(new mapboxgl.Popup()
             .setHTML("<h1>Hello World!</h1>"))
 
-    let anotherMarker = new mapboxgl.Marker()
+    let willMarker = new mapboxgl.Marker()
         .setLngLat([-118.681, 34.095669])
         .addTo(map)
+        .setPopup(new mapboxgl.Popup()
+    .setHTML('<img src="https://media2.giphy.com/media/aBOFW2LNUR9uT5lLYr/200.gif">'))
 
-    // let someOtherMarker = new mapboxgl.Marker()
-    //     .setLngLat([34.095, -118.681])
-    //     .addTo(map)
+    let rockMarker = new mapboxgl.Marker()
+        .setLngLat([-118.4514, 34.1490])
+        .addTo(map)
+        .setPopup(new mapboxgl.Popup()
+    .setHTML('<img src="https://c.tenor.com/MEPccorRo08AAAAM/chris-rock-nod.gif">'))
+
+    let oscarsMarker = new mapboxgl.Marker()
+        .setLngLat([-118.340468659893, 34.1026902])
+        .addTo(map)
+        .setPopup(new mapboxgl.Popup()
+    .setHTML('<img src="https://c.tenor.com/649X4UeLWJQAAAAd/will-smith-will-smith-oscars.gif">'))
+
+    $.get(URL, {
+        APPID: OPEN_WEATHER_APPID,
+    }).done(function (results) {
+        console.log(results)
+    });
+
+
+
+
+
+
 
 
 
