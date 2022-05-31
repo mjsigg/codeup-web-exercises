@@ -11,10 +11,19 @@ $.get(URL, {
     units: "imperial"
 }).done(function (data) {
 
-    let currentWeatherDescription = data.current.weather[0].description
-    let currentWeatherDescriptionHTML = '<h1>' + currentWeatherDescription +'</h1>'
+    let weeklyColumn = $('#weekly-column')
+    let weeklyColumnHTML =
+        '<li class="col text-center">'+ 'Monday'+ '</li>'+
+        '<li class="col text-center">'+ 'Tuesday'+ '</li>'+
+        '<li class="col text-center">'+ 'Wednesday'+ '</li>'+
+        '<li class="col text-center">'+ 'Thursday'+ '</li>'+
+        '<li class="col text-center">'+ 'Friday'+ '</li>'
 
-    $('#monday-box').append(currentWeatherDescriptionHTML + currentWeatherDescription)
+    weeklyColumn.append(weeklyColumnHTML)
+
+
+
+
 
 })
 
