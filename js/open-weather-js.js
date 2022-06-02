@@ -50,15 +50,15 @@ $.get(URL, {
     let weatherIconCurrent =
         '<img style="height: 200px" src="http://openweathermap.org/img/wn/'+
         data.daily[0].weather[0].icon +
-        '.png" alt= >'
+        '@2x.png" alt= >'
     let bigOlImage = $('#big-ol-image')
 
     bigOlImage.append(weatherIconCurrent)
 
-    let searhBox = $('#search-box')
+    let searchBox = $('#search-box')
     let searchBoxHTML = '<input type="text"/>'
 
-     searhBox.append(searchBoxHTML)
+    searchBox.append(searchBoxHTML)
 
     mapboxgl.accessToken = MAPBOX_API_KEY;
     const map = new mapboxgl.Map({
@@ -66,11 +66,21 @@ $.get(URL, {
         style: 'mapbox://styles/mapbox/streets-v11', // style URL
         center: [-98.4946, 29.425], // starting position [lng, lat]
         zoom: 4 // starting zoom
+
+
     });
 
+    let marker = new mapboxgl.Marker()
+        .setLngLat([])
+        .setDraggable()
+        .set
 
 
-})
+
+
+
+
+});
 
 
 
