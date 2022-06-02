@@ -11,21 +11,70 @@ $.get(URL, {
     units: "imperial"
 }).done(function (data) {
 
-    let weeklyColumn = $('#weekly-column')
-    let weeklyColumnHTML =
-        '<li class="col text-center">'+ 'Monday'+ '</li>'+
-        '<li class="col text-center">'+ 'Tuesday'+ '</li>'+
-        '<li class="col text-center">'+ 'Wednesday'+ '</li>'+
-        '<li class="col text-center">'+ 'Thursday'+ '</li>'+
-        '<li class="col text-center">'+ 'Friday'+ '</li>'
+    console.log(data)
 
-    weeklyColumn.append(weeklyColumnHTML)
+     for(let i = 0; i < data.daily.length-3; i++) {
 
+         let dailyTemperature = $('#daily-temperature')
+         let dailyTemperatureHTML = '<li class="col text-center">'+ data.daily[i].temp.day + '</li>'
 
+         dailyTemperature.append(dailyTemperatureHTML)
+
+         let dailyTempDayNight = $('#daily-temp-day-eve')
+         let dailyTempDayNightHTML =
+             '<li class="col text-center">' +
+             'Day: ' +
+             data.daily[i].temp.day +
+             ' Night: ' +
+             data.daily[i].temp.eve +
+             '</li>'
+
+         dailyTempDayNight.append(dailyTempDayNightHTML)
+
+         let dailyTemperatureMin = $('#daily-temp-min-max')
+         let dailyTemperatureMinMaxHTML = '<li class="col text-center">'+ 'Min: '+data.daily[i].temp.min + ' Max: '+ data.daily[i].temp.max + '</li>'
+
+         dailyTemperatureMin.append(dailyTemperatureMinMaxHTML)
+
+     }
+
+    let bigOlTemp = $('#big-ol-temp')
+    let bigOlTempHTML = '<h1 class="col">'+ data.current.temp + '</h1>'
+
+    bigOlTemp.append(bigOlTempHTML)
+
+    let currentFeelsLike = '<h2 class="col">'+'Feels like: '+ data.current.feels_like+'</h2>'
+
+    bigOlTemp.append(currentFeelsLike)
+
+    let weatherIconCurrent =
+        '<img style="height: 200px" src="http://openweathermap.org/img/wn/'+
+        data.daily[0].weather[0].icon +
+        '.png" alt= >'
+    let bigOlImage = $('#big-ol-image')
+
+    bigOlImage.append(weatherIconCurrent)
+
+    let searhBox = $('#search-box')
+    let searchBoxHTML = '<input type="text"/>'
+
+     searhBox.append(searchBoxHTML)
+
+    mapboxgl.accessToken = MAPBOX_API_KEY;
+    const map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/streets-v11', // style URL
+        center: [-98.4946, 29.425], // starting position [lng, lat]
+        zoom: 4 // starting zoom
+    });
 
 
 
 })
+
+
+
+
 
 // Geocode the string to receive the LAT, LONG to plug in for our OpenWeatherAPI Call.
 // geocode("Austin, US", MAPBOX_API_KEY).then(function (data) {

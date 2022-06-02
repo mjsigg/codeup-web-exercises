@@ -8,20 +8,45 @@
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet' />
 </head>
-<body style="list-style: none">
+<body class="container" style="list-style: none">
 
-<section  class="row" style="background-color: #97394E" id="weekly-column">
+<section class="row" style="background-color: #97394E" id="weekly-column">
+    <li id="monday"class="col text-center">Monday</li>
+    <li id="tuesday" class="col text-center">Tuesday</li>
+    <li id="wednesday" class="col text-center">Wednesday</li>
+    <li id="thursday" class="col text-center">Thursday</li>
+    <li id="friday" class="col text-center">Friday</li>
+</section>
+
+<section id='daily-temperature' class="row text-center">
 
 </section>
 
+<section id="daily-temp-day-eve" class="row text-center">
 
-<!--<section class="row text-center">-->
-<!--    <li class="col">test</li>-->
-<!--    <li class="col">test</li>-->
-<!--    <li class="col">test</li>-->
-<!--    <li class="col">test</li>-->
-<!--</section>-->
+</section>
 
+<section id="daily-temp-min-max" class="row text-center">
+
+</section>
+
+<hr>
+
+<section class="current-temp row te" id="banner">
+    <div style="background-color: #6f42c1" id="big-ol-temp" class="col-4 text-center">
+        <h1>Current</h1>
+    </div>
+
+    <div style="background-color: #0a53be" id="big-ol-image" class="col-8 text-end">
+    </div>
+</section>
+
+
+<section class="row">
+    <h3 style="background-color: #0a53be" class="col text-center">TEXT</h3>
+    <div class="col-2" id="search-box"></div>
+    <div class="col-8" id='map' style="height: 60vh"></div>
+</section>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
