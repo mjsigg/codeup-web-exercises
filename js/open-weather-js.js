@@ -56,31 +56,55 @@ $.get(URL, {
     bigOlImage.append(weatherIconCurrent)
 
     let searchBox = $('#search-box')
-    let searchBoxHTML = '<input type="text"/>'
+    let searchBoxHTML = '<input  class="col-10" type="text" placeholder="search by address"/> <button class="col">Go</button>'
 
     searchBox.append(searchBoxHTML)
 
-    mapboxgl.accessToken = MAPBOX_API_KEY;
-    const map = new mapboxgl.Map({
-        container: 'map', // container ID
-        style: 'mapbox://styles/mapbox/streets-v11', // style URL
-        center: [-98.4946, 29.425], // starting position [lng, lat]
-        zoom: 4 // starting zoom
+
+});
 
 
-    });
-
-    let marker = new mapboxgl.Marker()
-        .setLngLat([])
-        .setDraggable()
-        .set
-
-
-
-
+mapboxgl.accessToken = MAPBOX_API_KEY;
+const map = new mapboxgl.Map({
+    container: 'map', // container ID
+    style: 'mapbox://styles/mapbox/streets-v11', // style URL
+    center: [-98.4946, 29.425], // starting position [lng, lat]
+    zoom: 4 // starting zoom
 
 
 });
+
+// Add zoom and rotation controls to the map.
+map.addControl(new mapboxgl.NavigationControl());
+
+map.addControl(
+    new mapboxgl.GeolocateControl({
+        positionOptions: {
+            enableHighAccuracy: true
+        },
+// When active the map will receive updates to the device's location as it changes.
+        trackUserLocation: true,
+// Draw an arrow next to the location dot to indicate which direction the device is heading.
+        showUserHeading: true
+    })
+
+);
+
+let marker = new mapboxgl.Marker()
+    .setLngLat([-98.4946, 29.425])
+    .addTo(map)
+    .setPopup(new mapboxgl.Popup()
+        .setHTML("<h1>Hello World!</h1>"))
+    .setDraggable(true)
+
+MARKER.on("dragend", function () {
+    LONG_LAT = MARKER.getLngLat();
+    // document.getElementById("place").innerHTML = LONG_LAT.lng + ", " + LONG_LAT.lat;
+    MAP.flyTo({center: [LONG_LAT.lng, LONG_LAT.lat]});
+    reverseGeocode(LONG_LAT, MAPBOX_API_KEY).then(function (data) {
+        document.getElementById("place").innerHTML = data;
+    })
+})
 
 
 
